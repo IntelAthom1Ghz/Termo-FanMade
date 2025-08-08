@@ -157,17 +157,32 @@ header {
 }
 
 @media (max-width: 600px) {
-    #nav_logo {
-        font-size: 2rem;
-    }
-    #nav_list {
-        justify-content: center;
-    }
-    #nav_list a {
-        font-size: 14px;
-        padding: 6px 8px;
-    }
+  header {
+    padding: 20px 5% 60px;  /* mais espaço embaixo */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  #navbar {
+    flex-direction: column;
+    gap: 10px;
+    height: auto;
+    padding: 0;            /* retira o padding lateral excessivo */
+  }
+  #nav_logo {
+    position: static;
+    transform: none;
+    margin-bottom: 8px;
+  }
+  #nav_list {
+    justify-content: center;
+    width: 100%;
+    flex-wrap: wrap;
+  }
+  #nav_list a {
+    font-size: 14px;
+    padding: 6px 8px;
+  }
 }
-
 
 

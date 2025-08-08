@@ -1,4 +1,3 @@
-/* Reset básico */
 * {
     box-sizing: border-box;
     font-family: 'Montserrat', sans-serif;
@@ -15,16 +14,17 @@ body {
 }
 
 header {
-    width: 100%;
-    padding: 20px 5%;
     position: fixed;
     top: 0;
-    z-index: 1000;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    background-color: #6e5c62; /* Para cobrir o conteúdo quando fixo */
-    transition: padding 0.3s ease;
+    width: 100%;
+    height: 80px;
     display: flex;
     justify-content: center;
+    align-items: center;
+    padding: 0 5%;
+    background-color: #6e5c62;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    z-index: 1000;
 }
 
 #navbar {
@@ -32,16 +32,13 @@ header {
     max-width: 1200px;
     display: flex;
     align-items: center;
-    padding: 0;
-    position: relative;
     gap: 20px;
     flex-wrap: wrap;
     justify-content: center;
 }
 
-/* Logo centralizado */
 #nav_logo {
-    font-size: clamp(20px, 4vw, 32px);
+    font-size: clamp(20px,4vw,32px);
     font-weight: 700;
     color: #ffffff;
     flex: 1 1 100%;
@@ -49,29 +46,24 @@ header {
     margin-bottom: 10px;
 }
 
-/* Lista do navbar */
 #nav_list {
-    margin: 0;
-    padding: 0;
-    list-style: none;
     display: flex;
     gap: 10px;
     flex-grow: 1;
     justify-content: center;
-    flex-wrap: wrap; /* Para quebrar em várias linhas se necessário */
+    flex-wrap: wrap;
 }
 
-/* Links do navbar */
 #nav_list a {
-    color: #3a3a3c;
-    font-weight: 600;
-    text-decoration: none;
     font-size: 18px;
+    font-weight: 600;
     padding: 10px 15px;
     background-color: #e0e0e0;
+    color: #3a3a3c;
+    text-decoration: none;
     border-radius: 10px;
-    transition: transform 0.3s ease, background-color 0.3s;
-    white-space: nowrap; /* evitar quebra no meio do texto */
+    white-space: nowrap;
+    transition: transform 0.3s, background-color 0.3s;
 }
 
 #nav_list a:hover {
@@ -80,7 +72,10 @@ header {
     transform: scale(1.1);
 }
 
-/* Títulos */
+#content {
+    padding-top: 100px;
+}
+
 h1 {
     font-size: 2.5rem;
     margin-top: 10%;
@@ -91,29 +86,26 @@ h2 {
     margin-top: 10%;
 }
 
-/* Linha com letras */
 .linha {
     display: flex;
     justify-content: center;
     margin-bottom: 10px;
 }
 
-/* Quadrado da letra */
 .letra {
     width: 50px;
     height: 50px;
-    border: 2px solid #ccc;
     margin: 2px;
     font-size: 24px;
     font-weight: bold;
     line-height: 50px;
     text-transform: uppercase;
+    border: 2px solid #ccc;
     border-radius: 6px;
     background-color: #ffffff;
     color: #000000;
 }
 
-/* Cores para feedback */
 .certa {
     background-color: #6aaa64;
     color: white;
@@ -132,15 +124,14 @@ h2 {
     border-color: #787c7e;
 }
 
-/* Formulário */
 form {
     margin-top: 100px;
 }
 
 input[type="text"] {
-    padding: 10px 10px;
-    font-size: 18px;
     width: 300px;
+    padding: 10px;
+    font-size: 18px;
     border: none;
     border-radius: 8px;
     text-transform: uppercase;
@@ -149,26 +140,25 @@ input[type="text"] {
 }
 
 input[type="submit"] {
+    margin-left: 10px;
     padding: 10px 20px;
     font-size: 18px;
-    margin-left: 10px;
     background-color: #3a3a3c;
     color: white;
     border: none;
     border-radius: 8px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s;
 }
 
 input[type="submit"]:hover {
     background-color: #575759;
 }
 
-/* Mensagens */
 .mensagem {
     margin-top: 20px;
-    font-weight: bold;
     font-size: 1.1rem;
+    font-weight: bold;
 }
 
 .mensagem.certa {
@@ -179,30 +169,39 @@ input[type="submit"]:hover {
     color: #d9534f;
 }
 
-/* Tentativas restantes */
 .tentativas {
     margin-top: 25px;
     font-size: 1.1rem;
 }
 
-/* Letras erradas */
 .letras-erradas {
     margin-top: 15px;
-    color: #ff6b6b;
     font-weight: bold;
+    color: #ff6b6b;
 }
 
-/* Responsividade */
+.content{
+    margin-top: 30%;
+}
+@media (max-width: 1100px) {
+    #nav_list {
+        gap: 8px;
+        justify-content: flex-end;
+    }
+    #nav_list a {
+        font-size: 16px;
+        padding: 8px 10px;
+    }
+}
 
-/* Para telas até 900px (tablets e celulares grandes) */
 @media (max-width: 900px) {
     header {
-        padding: 15px 5%;
-        height: 80px;
+        height: 70px;
+        padding: 0 5%;
     }
     #nav_logo {
         font-size: 2rem;
-        margin-bottom: 8px;
+        margin-bottom: 6px;
     }
     #nav_list a {
         font-size: 16px;
@@ -214,14 +213,30 @@ input[type="submit"]:hover {
     }
 }
 
-/* Para telas até 600px (celulares) */
 @media (max-width: 600px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+        padding: 20px 5% 60px;
+    }
+    #navbar {
+        flex-direction: column;
+        gap: 10px;
+        padding: 0;
+    }
+    #nav_logo {
+        flex: none;
+        margin-bottom: 8px;
+        font-size: 1.6rem;
+    }
     #nav_list {
+        width: 100%;
         gap: 6px;
         justify-content: center;
     }
     #nav_list a {
-        font-size: 10px;
+        font-size: 14px;
         padding: 6px 8px;
     }
     .letra {
@@ -232,17 +247,5 @@ input[type="submit"]:hover {
     }
     input[type="text"] {
         width: 130px;
-    }
-}
-
-@media (max-width: 1100px) {
-    #nav_list a {
-        font-size: 16px;
-        padding: 8px 10px;
-        white-space: nowrap;
-    }
-    #nav_list {
-        gap: 8px;
-        justify-content: flex-end;
     }
 }
