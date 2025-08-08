@@ -186,7 +186,7 @@ a:hover {
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 10%;
+    height: 13%;
   }
   #navbar {
     flex-direction: column;
@@ -202,10 +202,12 @@ a:hover {
   #nav_list {
     justify-content: center;
     width: 100%;
-    flex-wrap: wrap;
   }
   #nav_list a {
     font-size: 14px;
     padding: 6px 8px;
+  }
+  form{
+    margin-top: 10%;
   }
 }
