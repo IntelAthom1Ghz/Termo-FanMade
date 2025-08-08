@@ -21,6 +21,7 @@ def init_db():
             tentativas TEXT)
             """)
         
+        
 
         conn.commit()
         
