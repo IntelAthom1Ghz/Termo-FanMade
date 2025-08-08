@@ -198,9 +198,7 @@ a:hover {
     position: static;
     transform: none;
     margin-bottom: 8px;
-    font-size: 0.8rem;
   }
-
   #nav_list {
     justify-content: center;
     width: 100%;
@@ -210,6 +208,6 @@ a:hover {
     padding: 6px 8px;
   }
   form{
-    margin-top: 10%;
+    margin-top: 15%;
   }
 }
