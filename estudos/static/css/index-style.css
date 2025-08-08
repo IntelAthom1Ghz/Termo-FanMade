@@ -1,0 +1,147 @@
+* {
+    font-family: 'Montserrat', sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #6e5c62;
+    color: #F3F3F3;
+}
+
+html {
+    -webkit-text-size-adjust: 100%;
+    line-height: 1.15;
+}
+
+header {
+    width: 100%;
+    padding: 20px 8%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    background-color: #6e5c62;
+}
+
+#navbar {
+    display: flex;
+    align-items: center;
+    padding: 0 8%;
+    height: 60px;
+    position: relative;
+}
+
+#nav_logo {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: clamp(20px, 4vw, 32px);
+    color: #ffffff;
+    font-weight: 600;
+}
+
+#nav_list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    gap: 10px;
+    flex-grow: 1;
+    justify-content: flex-end;
+}
+
+#nav_list a {
+    color: #3a3a3c;
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px 10px;
+    background-color: #e0e0e0;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+}
+
+#nav_list a:hover {
+    background-color: #cccccc;
+}
+
+#content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding-top: 100px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.container {
+    max-width: 800px;
+    width: 100%;
+    text-align: center;
+}
+
+.title {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    color: #dddddd;
+    margin-bottom: 40px;
+}
+
+.sobre-projeto {
+    background-color: #8a7680;
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 30px;
+}
+
+.sobre-projeto h1 {
+    font-size: 1.8rem;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.sobre-projeto p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #f0f0f0;
+}
+
+#cta_btns a {
+    display: inline-block;
+    background-color: #3a3a3c;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+#cta_btns a:hover {
+    background-color: #575759;
+}
+
+.social {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.social a {
+    font-size: 24px;
+    color: #ffffff;
+    transition: color 0.3s ease;
+}
+
+.social a:hover {
+    color: #ccc;
+}

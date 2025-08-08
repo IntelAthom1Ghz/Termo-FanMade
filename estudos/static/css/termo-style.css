@@ -1,0 +1,191 @@
+/* Reset básico */
+* {
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #6e5c62;
+    color: #F3F3F3;
+    text-align: center;
+    padding: 40px 20px;
+    min-height: 100vh;
+}
+header {
+    width: 100%;
+    padding: 28px 8%;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#navbar {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 0 8%;
+    height: 60px;
+}
+
+#nav_logo {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: clamp(20px, 4vw, 32px);
+    font-weight: 700;
+    color: #ffffff;
+}
+
+#nav_list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    gap: 10px;
+    flex-grow: 1;
+}
+
+#nav_list a {
+    color: #3a3a3c;
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px 10px;
+    background-color: #e0e0e0; /* tom neutro */
+    border-radius: 10px;
+    transition: transform 0.3s ease, background-color 0.3s;
+}
+
+#nav_list a:hover {
+    background-color: #818384; /* hover cinza escuro */
+    color: #ffffff;
+    transform: scale(1.1);
+}
+/* Títulos */
+h1 {
+    font-size: 2.5rem;
+    margin-top: 10%;
+}
+
+h2 {
+    font-size: 1.5rem;
+    margin-top: 10%;
+}
+
+/* Linha com letras */
+.linha {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+/* Quadrado da letra */
+.letra {
+    width: 50px;
+    height: 50px;
+    border: 2px solid #ccc;
+    margin: 2px;
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 50px;
+    text-transform: uppercase;
+    border-radius: 6px;
+    background-color: #ffffff;
+    color: #000000;
+}
+
+/* Cores para feedback */
+.certa {
+    background-color: #6aaa64; /* verde */
+    color: white;
+    border-color: #6aaa64;
+}
+
+.quase {
+    background-color: #c9b458; /* amarelo */
+    color: white;
+    border-color: #c9b458;
+}
+
+.errada {
+    background-color: #787c7e; /* cinza */
+    color: white;
+    border-color: #787c7e;
+}
+
+/* Formulário */
+form {
+    margin-top: 100px;
+}
+
+input[type="text"] {
+    padding: 10px 10px;
+    font-size: 18px;
+    width: 300px;
+    border: none;
+    border-radius: 8px;
+    text-transform: uppercase;
+    text-align: center;
+    outline: none;
+}
+
+input[type="submit"] {
+    padding: 10px 20px;
+    font-size: 18px;
+    margin-left: 10px;
+    background-color: #3a3a3c;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+    background-color: #575759;
+}
+
+/* Mensagens */
+.mensagem {
+    margin-top: 20px;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.mensagem.certa {
+    color: #6aaa64;
+}
+
+.mensagem.errada {
+    color: #d9534f;
+}
+
+/* Tentativas restantes */
+.tentativas {
+    margin-top: 25px;
+    font-size: 1.1rem;
+}
+
+/* Letras erradas */
+.letras-erradas {
+    margin-top: 15px;
+    color: #ff6b6b;
+    font-weight: bold;
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+    .letra {
+        width: 40px;
+        height: 40px;
+        font-size: 20px;
+        line-height: 40px;
+    }
+
+    input[type="text"] {
+        width: 130px;
+    }
+}

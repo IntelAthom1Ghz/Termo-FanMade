@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+       <link rel="stylesheet" href="{{ url_for('static', filename='css/login-style.css') }}">
+       <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Mitr:wght@200;300;400;500;600;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap" rel="stylesheet">
+
+
+    <title>Alterar senha(email para instruções)</title>
+</head>
+<body>
+<header>
+    <nav id="navbar">
+        <i class="#" id="nav_logo">Termo</i>
+        <ul id="nav_list">
+            <a href="{{url_for('views.index') }}">Voltar ao início</a>
+        </ul>
+        </nav>
+</header>
+
+<form method="POST" action="{{ url_for('views.nova_senha') }}">
+    {{ form.hidden_tag() }}
+    <h1>Enviar instruções</h1>
+
+    <label for="{{ form.email.id }}">Email:</label>
+    {{ form.email }}
+    {% for error in form.email.errors %}
+      <div style="color:red">{{ error }}</div>
+    {% endfor %}
+
+    <label for="{{ form.confirmar_email.id }}">Confirmar email:</label>
+    {{ form.confirmar_email }}
+    {% for error in form.confirmar_email.errors %}
+      <div style="color:red">{{ error }}</div>
+    {% endfor %}
+<div class="submit-btn">
+    {{ form.enviar() }}
+    </div>
+    {% if erro %}
+      <p style="color:red; text-align: center;">{{ erro }}</p>
+    {% endif %}
+</form>
+
+
+    
+</body>
+</html>
