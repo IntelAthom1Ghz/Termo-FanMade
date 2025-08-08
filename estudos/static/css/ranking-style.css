@@ -123,6 +123,7 @@ form {
 @media (max-width: 900px) {
     header {
         padding: 15px 5%;
+        height:13%;
     }
     #nav_logo {
         font-size: 2rem;
@@ -131,6 +132,9 @@ form {
     #nav_list a {
         font-size: 16px;
         padding: 8px 12px;
+    }
+    form{
+        margin-top: 10%;
     }
 }
 
@@ -148,5 +152,8 @@ form {
     #nav_list a {
         font-size: 14px;
         padding: 6px 8px;
+    }
+     .container{
+        margin-top: 30%;
     }
 }

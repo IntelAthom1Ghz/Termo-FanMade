@@ -186,6 +186,7 @@ a:hover {
     display: flex;
     flex-direction: column;
     align-items: center;
+    height: 10%;
   }
   #navbar {
     flex-direction: column;
