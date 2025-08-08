@@ -11,12 +11,15 @@ def login_required(f):
         return f(*args, **kwargs)
     return decorated_function
 
-def carregar_palavras(caminho = 'C:/Users/otavio/Documents/GitHub/Termo-FanMade/data/palavras.txt'):
-    arquivo = Path(caminho)
-    if not arquivo.exists():
-        raise FileNotFoundError(f'Arquivo {caminho} não encontrado.')
-    
-    with open(arquivo, 'r', encoding='utf-8') as f:
-        palavras = [linha.strip().lower() for linha in f if len(linha.strip()) == 5]
-        return palavras
 
+
+# Caminho relativo à pasta onde está este arquivo Python
+BASE_DIR = Path(__file__).resolve().parent.parent
+caminho = BASE_DIR / 'data' / 'palavras.txt'
+
+def carregar_palavras():
+    if not caminho.exists():
+        raise FileNotFoundError(f'Arquivo {caminho} não encontrado.')
+
+    with open(caminho, 'r', encoding='utf-8') as f:
+        return [linha.strip() for linha in f.readlines()]
