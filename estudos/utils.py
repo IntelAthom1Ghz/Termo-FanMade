@@ -11,7 +11,7 @@ def login_required(f):
         return f(*args, **kwargs)
     return decorated_function
 
-def carregar_palavras(caminho = 'C:/Users/otavio/Documents/ESTUDOS 03082025/guess game/estudos/data/palavras.txt'):
+def carregar_palavras(caminho = 'C:/Users/otavio/Documents/GitHub/Termo-FanMade/data/palavras.txt'):
     arquivo = Path(caminho)
     if not arquivo.exists():
         raise FileNotFoundError(f'Arquivo {caminho} não encontrado.')
