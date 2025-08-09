@@ -185,4 +185,18 @@ header {
   }
 }
 
+@media(max-width: 1000px){
+    #nav-list{
+        justify-content: center;
+        width: 100px;
+        flex-wrap: wrap;
+    }
+
+    #nav_list a {
+    font-size: 14px;
+    padding: 6px 8px;
+    margin-left: 10px;
+  }
+}
+
 
