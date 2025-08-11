@@ -98,7 +98,6 @@ def nova_senha():
 @views.route('/nova_senha<email>', methods =['POST','GET'])
 def criar_nova_senha(email):
     form = SenhaForm()
-    erro = None
     
     with sqlite3.connect('app/usuarios.db') as conn:
         cursor = conn.cursor()
